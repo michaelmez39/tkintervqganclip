@@ -1,0 +1,18 @@
+image:
+  path: null
+  width: 100
+  height: 100
+  channels: 3
+
+model:
+  prompts: ["people exploring a dungeon #pixelart"]
+  step_size: 0.1
+  iterations: 200
+  output_dir: "./images"
+
+vqgan:
+  model: "taming-transformers/logs/vqgan_imagenet_f16_1024/configs/model.yaml"
+  checkpoint: "taming-transformers/logs/vqgan_imagenet_f16_1024/checkpoints/last.ckpt"
+
+clip:
+  model: "ViT-B/16"
