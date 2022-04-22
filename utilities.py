@@ -6,9 +6,15 @@ import torch
 import sys
 import os
 sys.path.append(os.path.abspath('./prompts.py'))
+
+from PIL import Image
+import numpy as np
+
 from prompts import replace_grad
 
-
+def random_noise(w,h):
+    noise = Image.fromarray(np.random.randint(0,255,(w,h,3),dtype=np.dtype('uint8')))
+    return noise
 
 def vector_quantize(x, codebook):
   d = x.pow(2).sum(dim=-1, keepdim=True) + codebook.pow(2).sum(dim=1) - 2 * x @ codebook.T

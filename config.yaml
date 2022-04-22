@@ -1,13 +1,13 @@
 image:
-  path: null
+  path: "./ny.jpg"
   width: 100
   height: 100
   channels: 3
 
 model:
-  prompts: ["people exploring a dungeon #pixelart"]
+  prompts: ["new york city art deco"]
   step_size: 0.1
-  iterations: 200
+  iterations: 3
   output_dir: "./images"
 
 vqgan:
